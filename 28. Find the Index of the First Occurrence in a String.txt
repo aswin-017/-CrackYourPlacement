@@ -1,0 +1,19 @@
+class Solution {
+    public int strStr(String s, String k) {
+        int n=s.length();
+        int m=k.length();
+        String res="";
+        for(int i=0;i<n;i++){
+            if(s.charAt(i)==k.charAt(0)&&i+m-1<n){
+                res=s.substring(i,i+m);
+                System.out.print(res);
+
+            }
+            if(k.equals(res)){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
+}
